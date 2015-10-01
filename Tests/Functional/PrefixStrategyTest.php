@@ -54,8 +54,15 @@ class PrefixStrategyTest extends BaseTestCase
         $this->assertTrue($response->isRedirect('/de/'), (string) $response);
 
         $cookies = $response->headers->getCookies();
-        $this->assertSame(1, count($cookies));
-        $this->assertSame('de', $cookies[0]->getValue());
+
+        foreach ($cookies as $cookie) {
+            if ($cookie->getName() === 'hl') {
+                $this->assertSame('de', $cookie->getValue());
+                return;
+            }
+        }
+
+        $this->fail('Languange cookie not set');
     }
 
     public function testNoCookieOnError()
@@ -69,6 +76,11 @@ class PrefixStrategyTest extends BaseTestCase
         $this->assertTrue($response->isClientError(), (string) $response);
 
         $cookies = $response->headers->getCookies();
-        $this->assertSame(0, count($cookies));
+
+        foreach ($cookies as $cookie) {
+            if ($cookie->getName() === 'hl') {
+                $this->fail('Language cookie shouln\'t be set');
+            }
+        }
     }
 }
