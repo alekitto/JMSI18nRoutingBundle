@@ -9,31 +9,27 @@
         {
             "name":   "Johannes M. Schmitt",
             "email":  "schmittjoh@gmail.com"
-        },
-        {
-            "name": "Albert Casademont",
-            "email": "albertcasademont@gmail.com"
         }
     ],
     "minimum-stability": "dev",
     "require": {
-        "symfony/framework-bundle": "~2.3|~3.0"
+        "symfony/framework-bundle": "~2.4|~3.0"
     },
     "require-dev": {
-        "symfony/framework-bundle": "~2.3|~3.0",
-        "symfony/css-selector": "~2.3|~3.0",
-        "symfony/http-kernel": "~2.3|~3.0",
-        "symfony/validator": "~2.3|~3.0",
-        "symfony/browser-kit": "~2.3|~3.0",
-        "symfony/finder": "~2.3|~3.0",
-        "symfony/form": "~2.3|~3.0",
-        "symfony/yaml": "~2.3|~3.0",
-        "symfony/process": "~2.3|~3.0",
-        "symfony/routing": "~2.3|~3.0",
-        "symfony/http-foundation": "~2.3|~3.0",
-        "symfony/class-loader": "~2.3|~3.0",
-        "symfony/twig-bundle": "~2.3|~3.0",
-        "sensio/framework-extra-bundle": "~2.3|~3.0",
+        "symfony/framework-bundle": "~2.4|~3.0",
+        "symfony/css-selector": "~2.4|~3.0",
+        "symfony/http-kernel": "~2.4|~3.0",
+        "symfony/validator": "~2.4|~3.0",
+        "symfony/browser-kit": "~2.4|~3.0",
+        "symfony/finder": "~2.4|~3.0",
+        "symfony/form": "~2.4|~3.0",
+        "symfony/yaml": "~2.4|~3.0",
+        "symfony/process": "~2.4|~3.0",
+        "symfony/routing": "~2.4|~3.0",
+        "symfony/http-foundation": "~2.4|~3.0",
+        "symfony/class-loader": "~2.4|~3.0",
+        "symfony/twig-bundle": "~2.4|~3.0",
+        "sensio/framework-extra-bundle": "~2.4|~3.0",
         "jms/di-extra-bundle": "*"
     },
     "autoload": {
