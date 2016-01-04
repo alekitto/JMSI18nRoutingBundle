@@ -167,7 +167,7 @@ class I18nRouter extends Router
         return $this->matchI18n($matcher->matchRequest($request), $pathInfo);
     }
 
-    public function setRequest(Request $request)
+    public function setRequest(Request $request = null)
     {
         $this->request = $request;
     }

@@ -16,6 +16,7 @@
         <parameter key="jms_i18n_routing.cookie_setting_listener.class">JMS\I18nRoutingBundle\EventListener\CookieSettingListener</parameter>
         
         <parameter key="jms_i18n_routing.route_translation_extractor.class">JMS\I18nRoutingBundle\Translation\RouteTranslationExtractor</parameter>
+        <parameter key="jms_i18n_routing.router_listener.class">JMS\I18nRoutingBundle\EventListener\RouterListener</parameter>
     </parameters>
 
     <services>
@@ -71,6 +72,12 @@
             <argument type="service" id="router" />
             <argument type="service" id="jms_i18n_routing.route_exclusion_strategy" />
             <tag name="jms_translation.extractor" alias="jms_i18n_routing" />
+        </service>
+
+        <service id="jms_i18n_routing.router_listener" class="%jms_i18n_routing.router_listener.class%">
+            <argument type="service" id="request_stack" />
+            <argument type="service" id="router" />
+            <tag name="kernel.event_subscriber" />
         </service>
     </services>
 </container>
